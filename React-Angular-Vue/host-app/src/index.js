@@ -1,22 +1,3 @@
-// import ReactApp from 'reactApp/App';
-// import AngularComponent from 'angularApp/AngularComponent';
-
-
-// // Dynamically import and render the components from each framework
-// const loadApps = async () => {
-//   const reactApp = await import('reactApp/App');
-//   const angularComponent = await import('angularApp/AngularComponent');
-
-  
-//   document.getElementById('react-root').appendChild(reactApp.default);
-//   document.getElementById('angular-root').appendChild(angularComponent.default);
-
-// };
-
-// loadApps();
-
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -30,15 +11,15 @@ const loadApps = async () => {
     ReactDOM.render(<ReactApp />, reactRoot);  // JSX for rendering React component
 
     
-    const { default: AngularComponent } = await import('angularApp/AngularComponent');
+    // const { default: AngularComponent } = await import('angularApp/AngularComponent');
     
   
-    const angularRoot = document.getElementById('angular-root');
-    angularRoot.innerHTML = '<app-root></app-root>';  
+    // const angularRoot = document.getElementById('angular-root');
+    // angularRoot.innerHTML = '<app-root></app-root>';  
 
-    // Bootstrapping Angular app
-    const { AppModule } = await import('angularApp/AppModule');
-    platformBrowserDynamic().bootstrapModule(AppModule);
+    // // Bootstrapping Angular app
+    // const { AppModule } = await import('angularApp/AppModule');
+    // platformBrowserDynamic().bootstrapModule(AppModule);
     
   } catch (error) {
     console.error('Error loading remote apps:', error);
